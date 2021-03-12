@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style-search.css">
+  
+</head>
+<body>
+  <div class="searchbar">
+	<div class="con-search notValue">
+        <div class="con-input">
+            <input 
+                onblur="handleBlur()" 
+                onfocus="handleFocus(event)" 
+                placeholder="Search Application (example : adobe photoshop, chrome, etc)" 
+                oninput="handleSearch(event)" 
+                type="text">
+            <i class='bx bx-search'></i>
+            <i onclick="handleRemove()" class='fa fa-search' ></i>
+        </div>
+        <div class="content-results">
+            <div class="con-results"></div>
+            <div class="not-results">Not Results</div>
+        </div>
+    </div>
+  </div>
+</body>
+<script src="./script-search.js"></script>
+</html>

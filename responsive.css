@@ -107,7 +107,7 @@
       display: block;
       position: absolute;
       top: 0;
-      right: 60px;
+      right: 35px;
       cursor: pointer;
     }
 
@@ -116,7 +116,7 @@
       color: #7C7C7D;
       position: absolute;
       top: 0;
-      right: 40px;
+      right: 15px;
       line-height: 70px;
       cursor: pointer;
       font-size: 25px;
@@ -159,10 +159,6 @@
     .main-difference {
       font-size: 16px;
       font-weight: 500;
-    }
-
-    .main-difference td:nth-of-type(even){
-      width: 50vh;
     }
 
    .foot ul li svg {
@@ -218,6 +214,7 @@
 
   .foot .connect {
     padding: 10px 0 5px 0;
+    font-size: 18px;
   }
 
   .footer-row ul li {
@@ -228,6 +225,28 @@
     padding: -30px 0 0 0;
   }
 
+  .sec1 img {
+    width: 80%;
+    height: auto;
+  }
+
+  .main-difference td:nth-of-type(even){
+      width: 30%;
+      font-size: 12px;
+  }
+
+  .p-ket1 {
+    font-size: 20px;
+    padding: 30px 0 10px 0;
+  }
+
+  .sec1 h3 {
+    letter-spacing: 0.4px;
+  }
+
+  .login-logo {
+    right: 20px;
+  }
 }
 
 @media(max-width: 574px){
@@ -249,4 +268,11 @@
     text-align: left;
     width: 100%;
   }
+}
+
+@media (min-width: 1560px) {
+  .footer-row {
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
 }
