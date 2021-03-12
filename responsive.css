@@ -245,7 +245,11 @@
   }
 
   .login-logo {
-    right: 20px;
+    right: 5px;
+  }
+
+  .searchbar {
+    margin-right: 90px;
   }
 }
 
