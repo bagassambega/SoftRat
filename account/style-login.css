@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 200vh;
+}
+
+nav{
+    background: #1b1b1b;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+nav:after{
+    content: '';
+    display: table;
+  }
+
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+  }
+
+nav ul{
+    float: right;
+    margin-right: 65px;
+    list-style: none;
+    position: relative;
+  }
+
+nav ul li{
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+  }
+
+nav {
+    background: #1b1b1b;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+  }
+
+nav .login-logo a {
+    color: white;
+    background-color: #1b1b1b;
+    display: inline-block;
+    top: 0;
+    line-height: 70px;
+    font-size: 25px;
+    right: 24px;
+    position: absolute;
+}
+
+nav .login-logo {
+    margin-right: 40px;
+}
+
+nav .login-logo a:hover {
+    color: #1BA8DA;
+    transition: color 0.4s;
+}
+
+nav .login-logo .fas, nav .logo a { 
+    color: white;
+}
+
+nav ul li{
+    float: left;
+    background: #1b1b1b;
+    margin: 0 5px;
+  }
+
+nav ul li li:nth-of-type(even) {
+    background-color: #2e2e2e;
+}
+
+nav ul li a{
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+nav ul li a:hover{
+    color: #1BA8DA;
+    border-radius: 5px;
+    box-shadow:  0 0 5px #0088A9,
+                 0 0 10px #027896;
+    transition: color 0.4s;
+  }
+
+nav ul ul li a:hover{
+    box-shadow: none;
+  }
+
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #1BA8DA;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .4s;
+    z-index: 2;
+  }
+
+nav ul ul ul{
+    border-top: none;
+  }
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+  }
+
+nav ul ul li a{
+    line-height: 50px;
+  }
+
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+
+.submenu,.navbar,input{
+    display: none;
+  }
+
+.fa-caret-right{
+    font-size: 15px;
+    margin-left: 40px;
+  }
+
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 500px;
+	margin: 0 30px;
+}
+
+.profile-card {
+	flex: 1 1 30%;
+	max-width: 300px;
+	background: white;
+	padding: 20px 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0 0 2px 0 #ccc;
+	transition:0.3s;
+}
+
+.profile-card:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 25px -5px #ccc;
+}
+
+.profile-icon {
+	height: 100px;
+	width: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.profile-name {
+	font-size: 26px;
+	font-weight: bold;
+	margin: 25px 0 10px 0;
+}
+
+.profile-position {
+	font-size: 14px;
+	color: #777;
+}
+
+form {
+	margin: 100px;
+}
+
+.buat-input {
+	position: relative;
+	width: 250px;
+	height:44px;
+	line-height: 44px;
+}
+
+.buat-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #d3d3d3;
+	transition: 0.3s all;
+	cursor: text;
+}
+
+input {
+	width: 100%;
+	border: 0;
+	outline: 0;
+	padding: 0.5rem 0;
+	border-bottom: 3px solid;
+	box-shadow: none;
+}
+
+input:invalid {
+	outline: 0;
+}
+
+input:focus,
+input:valid {
+	border-color: red;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+	font-size: 12px;
+	top: -26px;
+	color: cornflowerblue;
+}
+
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.button {
+	margin: 10px 40px;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	color: #999;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.button:hover {
+	color: #fff;
+	background: cornflowerblue;
+	border: 1px solid;
+	transition: all 0.3s ease-out;
+}
+
+.button2 {
+	color: cornflowerblue;
+}
+
+.button2:hover {
+	color: red;
+}
+
+@media screen and (max-width:
+1000px) {
+	.profile-name {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width:
+800px) {
+	.profile-card {
+		padding: 20px 15px;
+	}
+	.profile-name {
+		font-size: 16px;
+	}
+}	
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
