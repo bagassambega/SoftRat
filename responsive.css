@@ -111,6 +111,12 @@
       cursor: pointer;
     }
 
+    .searchbar {
+      display: block;
+      position: absolute;
+      right: 20px;
+    }
+
     .navbar{
       display: block;
       color: #7C7C7D;
@@ -248,9 +254,6 @@
     right: 5px;
   }
 
-  .searchbar {
-    margin-right: 90px;
-  }
 }
 
 @media(max-width: 574px){

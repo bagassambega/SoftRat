@@ -36,7 +36,7 @@ nav {
     background: #FAFAFA;
     box-sizing: border-box;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
@@ -189,7 +189,7 @@ nav ul ul ul li{
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.5s ease, visibility 0.5s ease;
-	z-index: 10;
+	z-index: 12;
 }
 
 #buat_modal:not(:target) {
@@ -410,6 +410,7 @@ table {
   height: 90%;
   object-fit: cover;
   box-sizing: border-box;
+  justify-content: space-around;
 }
 
 .overlay {
@@ -471,10 +472,13 @@ table {
 .card-text {
   display: flex;
   flex-direction: column;
-  padding: 2px 0;
+  padding: 2px 0 0px 0;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  bottom: 2px;
+  margin: 0 0 10px 0;
+  height: 230px;
 }
 
 .card-text h2 {
@@ -482,20 +486,24 @@ table {
   font-weight: 800;
   font-size: 26px;
   padding: 10px 0 6px 0;
+  top: 2px;
 }
 
 .card-text p {
   font-family: Book Antiqua;
-  padding: 12px 0;
+  padding: 14px 0;
+  font-weight: 500;
 }
 
 .card-text a {
   border-radius: 20px;
   padding: 14px 21px;
   background-color: #1EB0E9;
+  margin: 5px 0px 12px 0;
   color: white;
   transition: 0.3s ease-in;
   box-shadow: 1px 1px 10px #8f8d8d;
+  bottom: 5px;
 }
 
 .card-text a:hover {
@@ -504,6 +512,10 @@ table {
 
 .card-text a:active {
   transform: translateY(3px);
+}
+
+.recommendation {
+  padding: 10px 0 30px 0;
 }
 
 /*footer*/
