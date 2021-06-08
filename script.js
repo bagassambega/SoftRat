@@ -9,6 +9,20 @@ function navbar() {
   });
 }
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.backgroundColor = "#a19d9d";
+    document.getElementById("submenu").style.backgroundColor = "#a19d9d";
+    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out";    
+  } 
+  else {
+    document.getElementById("navbar").style.backgroundColor = "#FAFAFA";
+    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out";
+  }
+}
+
 function form() { 
   window.addEventListener("DOMContentLoaded", function () {
     // get the form elements defined in your form HTML above
