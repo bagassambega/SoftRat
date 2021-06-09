@@ -537,12 +537,12 @@ table {
     padding: 5px 20px;
     border-color: transparent;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 
 .foot .contact-icon li svg:hover {
     background-color: white;
     color: #343236;
-    transition: 0.5s ease-in-out;
 }
 
 .foot .contact-icon li {
