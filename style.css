@@ -335,7 +335,7 @@ nav ul ul ul li{
     color: #000000;
     font-size: 20px;
     margin-top: 5vh;
-    padding: 60px 0;
+    padding: 60px 0 20px 0;
 }
 
 .p-ket1 {
@@ -517,7 +517,7 @@ table {
 }
 
 .recommendation {
-  padding: 10px 0 30px 0;
+  padding: 30px 0 30px 0;
 }
 
 /*footer*/
