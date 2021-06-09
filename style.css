@@ -527,13 +527,14 @@ table {
     color: white;
 }
 
+/*footer icon container*/
 .foot .contact-icon li svg {
     background-color: transparent;
     color: white;
     font-size: 30px;
     border-radius: 30px 30px;
     border-style: groove;
-    padding: 5px 9px;
+    padding: 5px 20px;
     border-color: transparent;
     cursor: pointer;
 }
@@ -565,11 +566,6 @@ footer {
   padding: 7px 0;
 }
 
-.list table td {
-    min-width: 200px;
-    text-align: center;
-}
-
 .foot .connect {
   font-size: 20px;
   color: #e0dce4;
@@ -578,6 +574,7 @@ footer {
   font-family: logofont;
 }
 
+/*footer functional list container*/
 .footer {
   line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
@@ -638,7 +635,7 @@ footer {
 	font-weight: 300;
 	color: #bbbbbb;
 	display: block;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease-in;
 }
 
 .footer-row ul li a:hover{
