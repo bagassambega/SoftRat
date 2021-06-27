@@ -1,4 +1,4 @@
-
+// navbar on scroll animation
 
 function navbar() {
   let bars = document.querySelector(".navbar");
@@ -13,8 +13,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.backgroundColor = "#a19d9d";
-    document.getElementById("submenu").style.backgroundColor = "#a19d9d";
+    document.getElementById("navbar").style.backgroundColor = "#BFD8EC";
+    document.getElementById("submenu").style.backgroundColor = "#BFD8EC";
     document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out";    
   } 
   else {
