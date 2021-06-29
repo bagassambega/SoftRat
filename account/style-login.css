@@ -6,7 +6,8 @@
   src: url("../assets/font/SegoeUI.woff2") format("woff2"),
        url("../assets/font/SegoeUI.woff") format("woff"),
        url("../assets/font/SegoeUI.eot") format("embedded-opentype"),
-       url("../assets/font/segoeui.ttf") format("truetype");
+       url("../assets/font/segoeui.ttf") format("truetype"),
+       local("Segoe UI");
 }
 
 
