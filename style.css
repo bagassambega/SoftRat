@@ -50,7 +50,7 @@ nav .logo{
     line-height: 70px;
     padding-left: 60px;
     letter-spacing: 0.3px;
-    font-family: TPF+Yolk;
+    font-family: "TPF+Yolk", sans-serif;
   }
 
 nav .login-logo a {
@@ -235,7 +235,7 @@ nav ul ul ul li{
   border-radius: 6px;
   color: #ffffff;
   font-weight: 500;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-out;
 }
 
 .modal_portfolio:hover, .modal_blogger:hover {
@@ -272,7 +272,7 @@ nav ul ul ul li{
 }
 
 .sec1 h4 {
-    font-family: Segoe UI;
+    font-family: "Segoe UI", monospace;
     color: black;
     font-weight: 500;
     position: absolute;
