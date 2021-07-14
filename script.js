@@ -9,17 +9,21 @@ function navbar() {
   });
 }
 
+// scroll animation
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar").style.backgroundColor = "#BFD8EC";
     document.getElementById("submenu").style.backgroundColor = "#BFD8EC";
-    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out";    
+    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out, padding 0.4s ease-in-out";
+    document.getElementById("navbar").style.padding = "0px 0px";    
   } 
   else {
     document.getElementById("navbar").style.backgroundColor = "#FAFAFA";
-    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out";
+    document.getElementById("navbar").style.transition = "background-color 0.4s ease-in-out, padding 0.4s ease-in-out";
+    document.getElementById("navbar").style.padding = "4px 0px";
   }
 }
 

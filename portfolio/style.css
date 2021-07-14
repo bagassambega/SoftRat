@@ -1,0 +1,518 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../assets/font/SegoeUI.woff2") format("woff2"),
+       url("../assets/font/SegoeUI.woff") format("woff"),
+       url("../assets/font/SegoeUI.eot") format("embedded-opentype"),
+       url("../assets/font/segoeui.ttf") format("truetype"),
+       local("Segoe UI");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/font/Ubuntu-Regular.woff2") format("woff2"),
+       url("../assets/font/Ubuntu-Regular.woff") format("woff"),
+       url("../assets/font/Ubuntu-Regular.eot") format("embedded-opentype"),
+       url("../assets/font/Ubuntu-Regular.ttf") format("truetype"),
+       local("Ubuntu");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/font/Ubuntu-Bold.woff2") format("woff2"),
+       url("../assets/font/Ubuntu-Bold.woff") format("woff"),
+       url("../assets/font/Ubuntu-Bold.eot") format("embedded-opentype"),
+       url("../assets/font/Ubuntu-Bold.ttf") format("truetype"),
+       local("Ubuntu");
+  font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/*navigasi*/
+
+nav{
+    background: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+nav:after{
+    content: '';
+    display: table;
+  }
+
+nav ul{
+    float: right;
+    margin-right: 150px;
+    list-style: none;
+    position: relative;
+  }
+
+nav ul li{
+    display: inline-block;
+    
+    margin: 0 5px;
+  }
+
+nav {
+    
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+nav .logo{
+    float: left;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 70px;
+    padding-left: 60px;
+    letter-spacing: 0.3px;
+    font-family: "TPF+Yolk", sans-serif;
+  }
+
+nav .login-logo a {
+  color: black;
+  display: inline-block;
+  top: 0;
+  line-height: 70px;
+  font-size: 25px;
+  right: 24px;
+  position: absolute;
+}
+
+nav .login-logo, nav .searchbar {
+    margin-right: 80px;
+}
+
+nav .login-logo a:hover, nav .searchbar a:hover {
+    color: #656565;
+    transition: color 0.4s;
+}
+
+nav .login-logo .fas, nav .logo a, nav .searchbar { 
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav .searchbar a {
+  top: 0px;
+  right: 100px;
+  top: 0;
+  line-height: 70px;
+  font-size: 23px;
+  position: absolute;
+  display: inline-block;
+  color: black;
+}
+
+nav ul li{
+    float: left;
+    
+    margin: 0 5px;
+  }
+  
+  nav ul li li:nth-of-type(even) {
+    background-color: #f1f1f1;
+}
+
+  nav ul li li {
+    background-color: #FAFAFA;
+  }
+
+nav ul li a{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+  }
+
+nav ul li a:hover{
+    color: #5e5e5e;
+    border-radius: 5px;
+    transition: color 0.4s;
+  }
+
+nav ul ul li a:hover{
+    box-shadow: none;
+  }
+
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #2BA2F5;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .4s;
+    z-index: 2;
+  }
+
+nav ul ul ul{
+    border-top: none;
+  }
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+  }
+
+nav ul ul li a{
+    line-height: 50px;
+  }
+
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+
+.submenu,.navbar,#btn, #btn-1, #btn-2, #btn-3 {
+    display: none;
+  }
+
+.fa-right{
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  
+  .fa-caret-down{
+    font-size: 15px;
+    right: 35px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+section h1 {
+  font-size: 24px;
+}
+/*navigasi*/
+
+/*modal*/
+#buat_modal {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#buat_modal:target {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	z-index: 12;
+}
+
+#buat_modal:not(:target) {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s ease, visibility 1s ease;
+	z-index: 10;
+}
+
+.isi_modal {
+	padding: 70px 98px;
+	width: 40%;
+	background-color: white;
+	color: black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 99;
+}
+
+.header_modal {
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.875rem;
+	text-align: center;
+}
+
+.modal_redirect {
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal_portfolio, .modal_blogger {
+  padding: 11px 21px;
+  background-color: #1e9e71;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.3s ease-out;
+}
+
+.modal_portfolio:hover, .modal_blogger:hover {
+  background-color: #116346;
+  color: #dfdfdf;
+  transform: translateY(-2px);
+}
+
+.tutup_modal {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.25rem;
+	color: var(--dark2);
+	position: fixed;
+	top: 24px;
+	right: 24px;
+	transition: opacity 0.3 ease-in;
+}
+
+/* section general */
+article {
+  scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.content section {
+  height: 100vh;
+  scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+}
+
+/* section 1 */
+
+.home-container {
+  background-color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../assets/img/3\ web\ fix.png);
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  background-position: right;
+  background-size: 42vw 90vh;
+  text-align: left; 
+}
+
+.home-content h1 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 6.5vw;
+}
+
+.home-content h1:nth-of-type(1) {
+  font-size: 3vw;
+}
+
+.home-content a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.85vw;
+  background-color: #2BA2F5;
+  border: 2.5px solid #2BA2F5;
+  border-radius: 6px;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 500;
+  margin-top: 5vh;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-content h1:nth-of-type(1) {
+    -webkit-animation: slide-right 0.6s 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-right 0.6s 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.home-content h1:nth-of-type(2) {
+  -webkit-animation: slide-right2 0.6s 1.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-right2 0.6s 1.55s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.home-content a:hover {
+  background-color: transparent;
+  color: #2BA2F5;
+}
+
+.home-content a {
+    -webkit-animation: shadow-drop-2-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both, opacity-1 0.6s ease-in-out 2.2s both;
+            animation: shadow-drop-2-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both, opacity-1 0.6s ease-in-out 2.2s both;
+}
+
+.home-content {
+  margin-left: 3.5vw;
+}
+
+
+/* section 2 */
+
+.about-container {
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.center-about {
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 15vh;
+}
+
+/* typing animation */
+
+.typemation {
+  font-family: 'Montserrat', Segoe UI, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typemation p {
+  font-size: 2.5rem;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.typemation p span.typed-text {
+  font-weight: bold;
+  color: #dd7732;
+}
+
+.typemation p span.cursor {
+  background-color: rgb(161, 156, 156);
+  width: 0.1px;
+  animation: blink 1s infinite;
+}
+
+.typemation p span.cursor.typing {
+  animation: none;
+}
+
+/* animation */
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-25vh);
+            transform: translateX(-25vh);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-25vh);
+            transform: translateX(-25vh);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slide-right2 {
+  0% {
+    -webkit-transform: translateX(-35vh);
+            transform: translateX(-35vh);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+            opacity: 1;
+  }
+}
+
+@keyframes slide-right2 {
+  0% {
+    -webkit-transform: translateX(-35vh);
+            transform: translateX(-35vh);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+            opacity: 1;
+  }
+}
+
+@keyframes opacity-1 {
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shadow-drop-2-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes shadow-drop-2-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(36, 211, 202, 0.548);
+            box-shadow: 0 0 0 0 rgba(36, 211, 202, 0.548);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(36, 211, 202, 0.548);
+            box-shadow: 0 0 20px 0px rgba(36, 211, 202, 0.548);
+  }
+}
+
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}

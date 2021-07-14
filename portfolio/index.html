@@ -1,1 +1,194 @@
+<!DOCTYPE HTML>
+<html>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>SoftRat® | About Developer</title>
+    <link href="../assets/img/rat-logo-vector-design-template-2B8C6A4.jpg" rel="icon">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./responsive.css" rel="stylesheet">
+    <script src="./script.js"></script>
+    <script src="../assets/icon/icon.js"></script>
+</head>
+
+<body>
+<!--the body-->
+    <!-- navbar -->
+    <nav id="navbar">
+        <div class="logo"><a href="../index.html">SoftRat</a></div>
+        <label for="btn" class="navbar">
+            <span class="fas fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li>
+                <label for="btn-1" class="submenu" id="submenu">Operating System <svg class="fas fa-caret-down"></svg></label>
+                <a href="#">OS <span class="fas fa-caret-down"></span></a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">iOS</a></li>
+                    <li><a href="#">Windows</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="submenu">Categories <svg class="fas fa-caret-down"></svg></label>
+                <a href="#">Categories <svg class="fas fa-caret-down"></svg></a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">Designing</a></li>
+                    <li><a href="#">Editing</a></li>
+                    <li><a href="#">Graphic</a></li>
+                    <li><a href="#">Productivity</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li>
+                        <label for="btn-3" class="submenu">More <svg class="fas fa-caret-down"></svg></label>
+                        <a href="#"> More <span class="fas fa-caret-right"></span></a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="#">Adobe</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Google</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#buat_modal">About</a></li>
+        </ul>
+        <div class="login-logo" title="Login / Signup">
+            <a href="./account/index.html" title="Login / Signup">
+                <i class="fas fa-user-circle" title="Login / Signup"></i>
+            </a>
+        </div>
+        <div class="searchbar">
+            <a href="./search/index-search.html">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!--modal-->
+    <div id="buat_modal" class="About">
+		<div class="isi_modal">
+		<a href="#" class="tutup_modal"> &times </a>
+		<h2 class="header_modal"> About Developers </h2>
+		<p class="paragraf_modal">
+			My name is Bagas and I'm from Senior High School 3 Bandung.
+        <br>
+       I'm just a student who likes coding
+   		</p>
+        <div class="modal_redirect">
+            <a class="modal_portfolio" href="./portfolio/index.html">Portfolio</a>
+            <a class="modal_blogger" href="https://bagassambega.blogspot.com" target="_blank" rel="noopener noreferrer">Blogger</a>
+        </div>
+	    </div>
+    </div>
+
+
+    <article class="content">
+    <!--section 1 : home + button -->
+    <section class="home-container" id="home">
+        <div class="sections">
+            <div class="home-content">
+                <h1> Hello, </h1>
+                <h1> My name is <span> Bagas </span> </h1>
+                <a href="#tentang" class="home-button">Know more about me</a>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 2 : about-->
+    <section class="about-container" id="tentang">
+        <div class="sections">
+            <div class="about-content">
+                <div class="center-about">
+                    <h1 class="about-title"> Who am I? </h1>
+                    <div class="typemation" id="type-animation">
+                        <p> I am <span class="typed-text"> </span> 
+                        <span class="cursor"> &nbsp; </span> </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 3 : skill-->
+    <section class="skill-container" id="skill">
+        <div class="sections">
+            <div class="skill-content">
+                <h1>Hamlo</h1>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 4 : card-->
+    <section class="card-container" id="card">
+        <div class="sections">
+            <div class="card-content">
+                <h1>Hamlo</h1>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 5 : achievement-->
+    <section class="achievement-container" id="achievement">
+        <div class="sections">
+            <div class="achievement-content">
+                <h1>Hamlo</h1>
+            </div>
+        </div>
+    </section>
+</article>
+
+
+
+</body>
+
+<script>
+    const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Who-I-Am", "a Developer", "a Student", "BAGAS"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+</script>
+
+</html>

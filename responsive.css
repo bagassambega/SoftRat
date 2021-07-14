@@ -260,9 +260,10 @@
     letter-spacing: 0.4px;
   }
 
-  .login-logo {
-    right: 5px;
-  }
+.button {
+  display: flex;
+  right: 2px;
+}
 
   .card {
     width: 90%;
