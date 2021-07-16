@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Segoe UI";
   src: url("../assets/font/SegoeUI.woff2") format("woff2"),
@@ -26,6 +27,9 @@
        local("Ubuntu");
   font-weight: bold;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0;
@@ -372,10 +376,12 @@ article {
 .about-container {
   background-color: #ffffff;
   box-sizing: border-box;
+  padding: 8vh 4vw;
 }
 
 .center-about {
   text-align: center;
+  height: 20vh;
 }
 
 .about-title {
@@ -385,6 +391,74 @@ article {
   text-align: center;
   display: inline-block;
   margin-top: 15vh;
+}
+
+.content-about {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.content-about .content-photo-about {
+  width: 40%;
+  margin-bottom: 0;
+}
+
+.content-about .content-photo-about img {
+  width: fit-content;
+  height: 30vh;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.content-text-about h2 span {
+  text-decoration: line-through #050505 3px;
+}
+
+.content-about .content-text-about {
+  width: 60%;
+}
+
+.content-text-about h2 {
+  padding: 0 0 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+  word-spacing: 6px;
+  font-size: 25px;
+  width: max-content;
+}
+
+.content-text-about p {
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.4rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  width: auto;
+}
+
+.content-text-about a {
+  background-color: #2BA2F5;
+  border: 2px solid #2BA2F5;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-top: 35px;
+  transition: all 0.4s ease-in-out;
+  font-weight: 600;
+}
+
+.content-text-about a:hover {
+  background-color: transparent;
+  color: #2BA2F5;
 }
 
 /* typing animation */
@@ -417,6 +491,123 @@ article {
 
 .typemation p span.cursor.typing {
   animation: none;
+}
+
+
+/* section 3 */
+
+
+.skill-container {
+  background-color: #050505;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.skill-container h1 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 2px;
+  font-size: 40px;
+  margin-top: 20vh;
+  display: inline-block;
+}
+
+.skill-container .skill-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+    padding: 5vh 2vh 2vh 0vh;
+}
+
+.skill-card .skillbox {
+    width: calc(33% - 150px);
+    background: #4c4d4e;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-card .skillbox svg {
+  font-size: 50px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.skillbox .card {
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.skillbox:nth-of-type(2) {
+  padding: 75px 35px;
+}
+
+.skill-container .skillbox:hover {
+  transform: scale(1.05);
+  background-color: #2BA2F5;
+  border-color: solid 2px #2BA2F5;
+}
+
+.skillbox .skilltext {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin: 16px 0 10px 0;
+}
+
+.skillbox p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+/* section 4 */
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 2px;
+  font-size: 40px;
+  margin-top: 18vh;
+  display: inline-block;
+  margin-bottom: 5vh;
+  color: #dd7732;
+}
+
+.contact-container .contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  
+}
+
+.contact-box .row {
+  padding: 20px 0;
+  background-color: #eeeded;
+  margin: 2vh 5vw;
+}
+
+.row svg {
+  color: #2BA2F5;
+  font-size: 30px;
+}
+
+.row .head {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0.6vh 0 0.5vh 0;
+}
+
+.row .sub-title {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* animation */
