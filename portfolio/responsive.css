@@ -141,6 +141,27 @@
       border-bottom: 0px;
     }
 
+    .home-container {
+      background-image: none;
+    }
+
+    .home-content h1 {
+      font-size: 16vw;
+    }
+
+    .home-content h1:nth-of-type(1) {
+      font-size: 10vw;
+    }
+
+    .home-content a {
+      font-size: 35px;
+      padding: 20px 30px;
+    }
+
+    .content-about .content-photo-about img {
+      width: 200px;
+      height: 100px;
+    }
   }
   
   @media nav and (max-height: 300px) and (max-width: 968px) {
@@ -172,6 +193,13 @@
   }
   
   
-  @media(max-width: 788px) {
+  @media(max-width: 800px) {
   
+  .skill-card .skillbox {
+    width: auto;
+    margin: 2vh 0 1vh 0;
   }
+  
+
+
+}

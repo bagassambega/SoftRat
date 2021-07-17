@@ -408,8 +408,8 @@ article {
 }
 
 .content-about .content-photo-about img {
-  width: fit-content;
-  height: 30vh;
+  width: 450px;
+  height: 200px;
   object-fit: cover;
   justify-content: center;
   align-items: center;
